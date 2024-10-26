@@ -1,7 +1,15 @@
-double my_pow(double a, unsigned int b) 
-{
-	double c = a;
-	for (size_t i = 1; i < b; i++)
-		a = a * c;
-	return a;
+long powerFast(long num, long deg) {
+	long result = 1;
+	while (deg) {
+		if (deg % 2 == 0) {
+			deg = 2;
+			num = num;
+		}
+		else {
+			deg--;
+			result = num;
+		}
+	}
+
+	return result;
 }
